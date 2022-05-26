@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO APP</title>
+</head>
+<body>
+    <main class="main-container">
+        <header class="header-container">
+        </header>
+        <section class="section-header-container">
+            <div class="titleinfo-container">
+                <h1 class="title-contain">TO DO</h1>
+                <span class="icon-day day-night"></span>
+            </div>
+                <input class="new-todo" type="text" placeholder="Create a new todo...">
+        </section>
+        <section class="section-task-list-container">
+            <ul class="todo-list">
+                <!-- <li class="completed" data-id="abc">
+                    <div class="view">
+                        <input class="toggle" type="checkbox" checked>
+                        <label>Probar JavaScript</label>
+                        <button class="destroy"></button>
+                    </div>
+                    <input class="edit" value="Create a TodoMVC template">
+                </li> -->
+            </ul>
+            <footer class="footer">
+				<!-- This should be `0 items left` by default -->
+				<span class="todo-count"><strong>0</strong> items lefts</span>
+				<!-- Remove this if you don't implement routing -->
+				<ul class="filters">
+					<li>
+						<a class="selected filtro" href="#/">Todos</a>
+					</li>
+					<li>
+						<a class="filtro" href="#/active">Pendientes</a>
+					</li>
+					<li>
+						<a class="filtro" href="#/completed">Completados</a>
+					</li>
+				</ul>
+				<!-- Hidden if no completed items are left ↓ -->
+				<button class="clear-completed">Clear Completed</button>
+			</footer>
+        </section>
+    </main>
+</body>
+</html>

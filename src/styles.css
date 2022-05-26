@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;700&display=swap');
+
+:root {
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue: hsl(233, 11%, 84%);
+    --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+    --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue: hsl(236, 33%, 92%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+    --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+}
+
+.main-container.dark{
+    background-color: var(--Very-Dark-Blue);
+}
+
+.section-header-container input.dark {
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    color: var(--Light-Grayish-Blue);
+}
+
+.todo-list.dark {
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    color: var(--Light-Grayish-Blue);
+}
+
+.label.dark {
+    color: var(--Light-Grayish-Blue);
+}
+
+.section-task-list-container.dark {
+    background-color: var(--Very-Dark-Desaturated-Blue);
+}
+
+.todo-list .view.dark {
+    border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+}
+
+.footer.dark {
+    color: var(--Light-Grayish-Blue);
+}
+
+.clear-completed.dark {
+    color: var(--Light-Grayish-Blue);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans';
+    transition: 0.2s all ease;
+}
+
+* {
+    scrollbar-color: var(--gray2) var(--bg-color-sections);
+    scrollbar-width: thin;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+  *::-webkit-scrollbar-track {
+    background: var(--bg-color-sections);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--orange1);
+    /* border-radius: 20px; */
+    border: 100% solid var(--bg-color-sections);
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.041);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    width: 100%;
+    height: 260px;
+}
+
+.title-contain {
+    font-size: 5rem;
+}
+
+
+
+.section-header-container {
+    width: 60%;
+    max-width: 1200px;
+    min-width: 270px;
+    height: auto;
+    /* background-color: rgba(0, 255, 255, 0.146); */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 30px 0px;
+
+}
+
+.section-header-container .titleinfo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.section-header-container .titleinfo-container h1 {
+    color: var(--Very-Light-Gray);
+}
+
+.section-header-container form{
+/* background-color: rebeccapurple; */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.section-header-container  input {
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 4px 0 1px 40px;
+    font-size: 2rem;
+    box-shadow: 0px 4px 8px rgba(89, 74, 30, 0.16);
+}
+
+.section-header-container  input::placeholder {
+    font-size: 1.4rem;
+}
+
+.section-task-list-container {
+    width: 60%;
+    max-width: 1200px;
+    min-width: 270px;
+    height: 360px;
+    background-color: var(--Very-Light-Gray);
+    /* background-color: lightgreen; */
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 10px 0px 0px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(89, 74, 30, 0.16);
+}
+
+.section-task-list-container .todo-list {
+    /* background-color: lightblue; */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    /* border-radius: 8px; */
+    /* gap: 20px; */
+}
+
+.todo-list li {
+    list-style: none;
+}
+
+.todo-list li .edit {
+    display: none;
+}
+
+.todo-list .view {
+    width: 100%;
+    /* background-color: #4d4d4d; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+    position: relative;
+}
+
+.view label {
+    width: 70%;
+    /* background-color: rgb(223, 173, 230); */
+    padding: 10px 15px 10px 60px;
+}
+
+.todo-list li .toggle {
+	text-align: center;
+	width: 40px;
+	/* auto, since non-WebKit browsers doesn't support input styling */
+	height: 26px;
+	position: absolute;
+    left: calc(101% - 96%);
+	/* border: none; */
+    /* Mobile Safari */
+	/* -webkit-appearance: none;
+	appearance: none; */
+    cursor: pointer;
+}
+
+.todo-list li .toggle {
+	opacity: 0;
+}
+
+.todo-list li .toggle + label {
+	/*
+		Firefox requires `#` to be escaped - https://bugzilla.mozilla.org/show_bug.cgi?id=922433
+		IE and Edge requires *everything* to be escaped to render, so we do that instead of just the `#` - https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7157459/
+	*/
+    background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E');
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+.todo-list li .toggle:checked + label {
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E');
+}
+
+.todo-list li label {
+	word-break: break-all;
+	padding: 15px 15px 15px 60px;
+	display: block;
+	line-height: 1.2;
+	transition: color 0.4s;
+	font-weight: 400;
+	color: var(--Very-Dark-Blue);
+}
+
+.todo-list li .destroy {
+	width: 40px;
+    background: none;
+    border: none;
+	margin: auto 0;
+	font-size: 40px;
+	color: #cc9a9a;
+	transition: color 0.2s ease-out;
+    cursor: pointer;
+}
+
+.todo-list li .destroy:hover {
+	color: #af5b5e;
+}
+
+.todo-list li .destroy:after {
+	content: '×';
+}
+
+.todo-list li:hover .destroy {
+	display: block;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+	/* border-top: 1px solid #e6e6e6; */
+    padding: 20px;
+    align-items: center;
+    bottom: 0;
+}
+.todo-count {
+	
+}
+
+.todo-count strong {
+	font-weight: 300;
+}
+
+
+
+.filters li {
+	display: inline;
+}
+
+.filters li a {
+	color: inherit;
+	margin: 3px;
+	padding: 3px 7px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+    transition: 0.2s all ease;
+}
+
+.filters li a:hover {
+	/* border-color: rgba(175, 47, 47, 0.1); */
+    color: var(--Bright-Blue);
+}
+
+.filters li a.selected {
+	/* border-color: rgba(175, 47, 47, 0.2); */
+    color: var(--Bright-Blue);
+}
+
+.clear-completed,
+.clear-completed:active {
+	float: right;
+	position: relative;
+	line-height: 20px;
+	text-decoration: none;
+	cursor: pointer;
+    background: none;
+    border: none;
+    transition: 0.2s all ease;
+}
+
+.clear-completed:hover {
+	/* text-decoration: underline; */
+    color: var(--Bright-Blue);
+}
+
+.info {
+	margin: 65px auto 0;
+	color: #4d4d4d;
+	font-size: 11px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+
+.info p {
+	line-height: 1;
+}
+
+.info a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.info a:hover {
+	text-decoration: underline;
+}
+
+.completed label {
+    text-decoration:line-through;
+}
+
+.hidden {
+	display: none;
+}
+
+.icon-day {
+    width: 40px;
+    height: 40px;
+    background-image: url('../src/assets/icon-moon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+@media (max-width:640px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* .todo-list li .toggle {
+        left: 20px;
+    } */
+}
+
+@media screen and (max-width:1244px) {
+    .todo-list li .toggle {
+        left: calc(101% - 96.8%);
+    }
+}
