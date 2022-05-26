@@ -1,5 +1,5 @@
-import { Todo } from "../classes/todo.class";
-import  { todoList } from '../index'
+import { Todo } from "../../src/classes/todo.class";
+import  { todoList } from '../../src/index';
 const divTodoList = document.querySelector('.todo-list');
 const txtInput = document.querySelector('.new-todo')
 const deleteAllBtn = document.querySelector('.clear-completed');

@@ -1,7 +1,7 @@
-import './styles.css';
-import nodes from './js/nodes';
-import {createToDoHtml} from './js/components';
-import  { TodoList } from './classes/todo-list.class';
+import '../src/styles.css';
+import nodes from '../src/js/nodes';
+import {createToDoHtml} from '../src/js/components';
+import  { TodoList } from '../src/classes/todo-list.class';
 nodes.header_container.style.background = `url(./assets/bg-desktop-light.jpg)`;
 nodes.header_container.style.backgroundRepeat = 'no-repeat';
 nodes.header_container.style.backgroundSize = 'cover';
