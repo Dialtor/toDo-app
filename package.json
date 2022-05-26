@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --config webpack.config.js --open"
+    "start": "webpack serve --config webpack.config.js --open",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "Dialtor <dialtordev@gmail.com>",

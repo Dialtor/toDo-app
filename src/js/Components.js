@@ -1,5 +1,5 @@
-import { Todo } from "../../src/classes/todo.class";
-import  { todoList } from '../../src/index';
+import { Todo } from "../classes/todo.class";
+import  { todoList } from '../index';
 const divTodoList = document.querySelector('.todo-list');
 const txtInput = document.querySelector('.new-todo')
 const deleteAllBtn = document.querySelector('.clear-completed');
@@ -7,7 +7,7 @@ const ulFilters = document.querySelector('.filters')
 const allFilters = document.querySelectorAll('.filtro');
 const toDoCount = document.querySelector('.todo-count');
 const listToDo = document.documentElement.querySelector('.todo-list');
-console.log(allFilters);
+// console.log(allFilters);
 
 
 export const createToDoHtml = (todo) => {
